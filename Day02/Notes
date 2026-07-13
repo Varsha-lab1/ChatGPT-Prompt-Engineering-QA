@@ -1,0 +1,129 @@
+1.What is Zero Shot Prompting?
+Zero-shot means you ask the AI to perform a task without giving any examples.
+
+Ex.Generate test cases for a Login page.
+__________________________________________
+2. One-shot Prompting
+You provide one example before asking for a similar output.
+Ex.
+Scenario:
+Verify Login
+
+Expected:
+User logs in successfully.
+Now generate similar test cases for Registration.
+_____________________________________
+3.Few-shot Prompting
+You provide multiple examples before asking the AI to continue.
+Ex.
+Scenario:
+Login
+Expected:
+User logs in.
+
+Example 2
+Scenario:
+Logout
+Expected:
+User logs out.
+Now generate 20 more authentication test cases.
+___________________________________________________
+4.Role Prompting(most important)
+Tell ChatGPT who it should act as.
+like:Senior QA Engineer
+Automation Architect
+Product Owner
+API Testing Expert
+Security Tester
+Ex.
+You are a Senior QA Engineer with 10 years of experience.
+Generate comprehensive login test cases.
+_________________________________________
+5.Context Prompting:
+Give background information.
+Ex.
+The application is an e-commerce website.
+Users log in using email and password.
+Generate test cases.
+_____________________________________
+6.Constraint Prompting:
+gives rules/condition
+Ex.
+Generate exactly 20 test cases.
+Do not repeat scenarios.
+Include:
+- Positive
+- Negative
+- Boundary
+Exclude performance testing.
+_________________________________________
+7.Output Formatting:
+Ex.
+Return the result as a markdown table.
+Columns:
+- Test Case ID
+- Scenario
+- Preconditions
+- Steps
+- Expected Result
+- Priority
+_______________________________________
+
+8.Combining Techniques
+Prompt:
+Role:
+You are a Senior QA Engineer.
+Task:
+Generate manual test cases.
+Context:
+Banking Login page.
+Constraints:
+Generate 30 test cases.
+Include:
+- Positive
+- Negative
+- Boundary
+- Security
+- Accessibility
+Output:
+Markdown table with:
+- ID
+- Scenario
+- Steps
+- Expected Result
+- Priority
+_____________________________________________
+Examples:
+Ex.1:Bug Report
+
+You are a QA Lead.
+Generate a bug report.
+Bug:
+Search returns no results when searching for an existing product.
+Include:
+- Summary
+- Steps
+- Expected Result
+- Actual Result
+- Severity
+- Priority
+- Environment
+____________________________________________________
+Ex.2:Api Testing
+
+You are an API Testing Expert.
+Generate:
+- Positive tests
+- Negative tests
+- Boundary tests
+- Authentication tests
+API:
+POST /login
+_______________________________________________
+Ex.3SQL:
+
+You are a Database Tester.
+Generate SQL queries to verify:
+- Customer created
+- Order created
+- Payment completed
