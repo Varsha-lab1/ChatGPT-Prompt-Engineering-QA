@@ -1,0 +1,108 @@
+Day 5: AI-Powered Test Case Design with ChatGPT
+
+1.Types of Test Cases
+Positive Test Cases
+Verify that the system behaves correctly with valid input.
+Example:
+Valid email + valid password → Login successful
+
+Negative Test Cases
+Verify that invalid input is handled correctly.
+Example:
+Invalid password → Error message displayed
+
+Boundary Test Cases
+Test values at the limits.
+Example:
+Password length must be 8–20 characters.
+Test:
+7 characters ❌
+8 characters ✅
+20 characters ✅
+21 characters ❌
+
+Validation Test Cases
+Check required fields and input rules.
+Examples:
+Empty email
+Invalid email format
+Password with spaces
+Special characters
+
+Security Test Cases
+Examples:
+SQL Injection
+XSS
+Brute-force login attempts
+Session timeout
+Password masking
+
+Boundary Value Analysis (BVA)
+Definition
+Boundary Value Analysis focuses on testing values at the edges of valid input ranges because defects often occur there.
+Prompt:
+You are a Senior QA Engineer.
+Generate Boundary Value Analysis test cases for an age field that accepts values from 18 to 60.
+Return as a markdown table.
+
+Equivalence Partitioning (EP)
+Definition
+Instead of testing every value, divide inputs into groups (partitions). Test one representative value from each group.
+Prompt:
+Generate Equivalence Partitioning test cases for a password field with a valid length of 8–20 characters.
+
+Decision Table Testing
+Used when the output depends on multiple conditions.
+Prompt:
+Generate a Decision Table for a Login feature with email and password validation.
+
+State Transition Testing
+Definition
+Used when the application's behavior changes based on its current state.
+Prompt:
+Generate State Transition test cases for an ATM PIN verification feature.
+
+Error Guessing
+Definition
+Test cases created based on a tester's experience and intuition.
+Examples:
+Double-click the Login button.
+Paste extremely long text into input fields.
+Prompt:
+Act as a Senior QA Engineer.
+Generate Error Guessing test cases for an online banking login page.
+
+Pairwise Testing
+Definition
+When there are many input combinations, pairwise testing reduces the number of test cases while ensuring every pair of input values is tested at least once.
+Prompt:
+Generate Pairwise Testing combinations for:
+- Browser: Chrome, Firefox, Edge
+- OS: Windows, macOS
+- Language: English, French
+____________________________________________
+Master Prompt for Test Case Generation
+You are a Senior QA Lead with 12 years of experience.
+
+Feature:
+<Login Feature>
+
+Generate:
+
+1. Functional Test Cases
+2. Positive Test Cases
+3. Negative Test Cases
+4. Boundary Value Analysis Test Cases
+5. Equivalence Partitioning Test Cases
+6. Decision Table
+7. State Transition Test Cases
+8. Validation Test Cases
+9. Security Test Cases
+10. Accessibility Test Cases
+11. Regression Test Cases
+12. Smoke Test Cases
+13. Sanity Test Cases
+14. Test Data
+15. Automation Candidates
+
+Return all results in structured markdown tables.
