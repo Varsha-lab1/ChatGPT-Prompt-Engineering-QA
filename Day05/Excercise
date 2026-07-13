@@ -1,0 +1,27 @@
+Practice Exercises:
+Exercise 1
+
+Generate:
+20 Login test cases
+Positive
+Negative
+Boundary
+Solution:
+You are a Senior QA Engineer.
+Generate 20 login test cases.
+Include 
+-Positive
+-Negative
+-Boundary
+Return in tabular format.
+___________________________________________
+Exercise 2
+
+Generate Boundary Value Analysis test cases for:
+
+Age: 18–60
+Solution:
+You are a Senior QA Engineer.
+Generate Boundary Value Analysis test cases for an age field that accepts values from 18 to 60.
+Return as a markdown table.
+___________________________________________
