@@ -1,0 +1,42 @@
+Exercise 1
+Write a prompt to generate:
+30 Login Test Cases
+Functional
+Negative
+Boundary
+Markdown Table
+
+Solution:
+You are a senior QA Engineer.
+Generate 30 login test cases 
+Include:
+-Functional
+-Negative
+-Boundary
+Return as a markdown table.
+________________________________________________________________________
+Exercise 2
+
+Write a prompt for generating a professional bug report.
+
+Solution:
+You are a QA Lead.
+Generate a bug report.
+Bug:
+Login button functionality not working.
+Include:
+- Summary
+- Steps
+- Expected Result
+- Actual Result
+- Severity
+- Priority
+___________________________________________________________________
+
+
+
+
+
+
+- Environment
+
