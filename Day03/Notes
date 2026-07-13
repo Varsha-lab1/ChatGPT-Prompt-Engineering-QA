@@ -1,0 +1,164 @@
+1.Chain Prompting:
+Instead of asking one big question, split it into smaller logical steps.
+Bad Prompt:
+Analyze this requirement and generate everything.
+
+Good Prompt Sequence
+Prompt 1
+Analyze this Login requirement.
+Identify:
+- Functional Requirements
+- Non-functional Requirements
+- Missing Requirements
+
+Prompt2
+Generate Test Scenarios based on the above analysis.
+
+Prompt3
+Generate detailed test cases for each scenario.
+
+Prompt4
+Generate test data.
+
+Prompt5
+Identify automation candidates.
+____________________________________________________________
+
+2.Prompt Chaining (Real QA Workflow)
+Let's say you're testing a Shopping Cart.
+
+Step 1
+Analyze this Shopping Cart requirement.
+↓
+Step 2
+Generate Functional Test Scenarios.
+↓
+Step 3
+Generate Manual Test Cases.
+↓
+Step 4
+Generate Boundary Value Test Cases.
+↓
+Step 5
+Generate Negative Test Cases.
+↓
+Step 6
+Generate SQL Validation Queries.
+↓
+Step 7
+Generate Selenium Automation Candidates.
+_________________________________________________________________________
+3.Iterative Prompting
+The first answer isn't always the final one.
+Example:
+Prompt 1
+Generate Login test cases.
+AI generates 20 cases.
+
+Prompt 2
+Improve these test cases.
+Add:
+- Accessibility
+- Security
+- Edge Cases
+
+Prompt 3
+Review these test cases.
+Identify any missing scenarios.
+
+Prompt 4
+Add high-risk scenarios that are commonly missed.
+Each prompt improves the previous result.
+_________________________________________________________________________________
+4.Decomposition Prompting
+Break a large feature into smaller parts.
+Example: Registration Module
+Instead of:
+Generate Registration Test Cases.
+Break it down:
+Step 1
+Validate Name Field
+Step 2
+Validate Email
+Step 3
+Validate Password
+Step 4
+Validate Confirm Password
+Step 5
+Validate OTP
+Step 6
+Validate Registration Success
+Smaller prompts often lead to more complete coverage.
+___________________________________________________________________________
+5.Persona Prompting
+Ask ChatGPT to think from different perspectives.
+Ex.Act as a Senior QA Engineer.
+2.Act as a Product Owner.
+3.Act as a Backend Developer.
+4.Act as a Security Tester.
+5.Act as a first-time customer.
+Using multiple personas helps uncover different types of issues.
+____________________________________________________________
+6.Self-Review Prompting
+After ChatGPT generates an answer, ask it to review its own work.
+Example:
+
+Review the test cases you generated.
+Identify:
+- Missing scenarios
+- Duplicate test cases
+- Weak validations
+Suggest improvements.
+__________________________________________
+7.QA Workflow Prompt
+Use a structured workflow instead of asking for everything at once.
+Requirement
+↓
+Requirement Analysis
+↓
+Risk Analysis
+↓
+Test Scenarios
+↓
+Test Cases
+↓
+Test Data
+↓
+Bug Prediction
+↓
+Automation Candidates
+↓
+Regression Checklist
+__________________________________________________________
+8.Professional QA Master Prompt
+You are a Senior QA Lead with 10+ years of experience.
+Analyze the following feature:
+<Requirement>
+Perform these tasks in order:
+
+1. Requirement Analysis
+2. Missing Requirements
+3. Risks
+4. Functional Test Scenarios
+5. Positive Test Cases
+6. Negative Test Cases
+7. Boundary Test Cases
+8. Validation Test Cases
+9. Test Data
+10. Security Test Cases
+11. Accessibility Test Cases
+12. Performance Considerations
+13. Regression Impact
+14. SQL Validation Queries
+15. Automation Candidates
+
+Return everything in structured markdown tables.
+_________________________________________________
+Day 3 Cheat Sheet
+Technique	             Purpose                  	        Example
+Chain Prompting  	    Break a task into logical steps	      Requirement → Scenarios → Test Cases
+Prompt Chaining  	    Reuse previous output	                Use requirement analysis to generate test scenarios
+Iterative Prompting  	Improve an answer	                    "Review and add missing edge cases"
+Decomposition	        Split large features                	Validate Name → Email → Password separately
+Persona Prompting    	Change perspective	                  "Act as a Security Tester"
+Self-Review	          Improve quality                      	"Review your generated test cases for gaps"
