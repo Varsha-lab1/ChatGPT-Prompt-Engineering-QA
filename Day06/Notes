@@ -1,0 +1,54 @@
+Day 6: Bug Reporting & Defect Management with ChatGPT
+What is a Bug?
+A Bug (Defect) is a flaw in the software where the actual behavior differs from the expected behavior.
+Example
+Requirement:
+User should be able to log in using valid email and password.
+Actual:
+Login fails even with valid credentials.
+This is a bug.
+__________________________________________________
+ 2: Defect vs Error vs Failure  
+Term	        Meaning                            	Example
+Error        	Human mistake	                    Developer writes incorrect logic
+Defect (Bug)	Issue in software	                Login button not working
+Failure      	Software fails during execution	    Application crashes after clicking Login
+__________________________________________________
+3.Bug Life Cycle
+The bug life cycle describes the journey of a bug from discovery to closure.
+New
+ ↓
+Assigned
+ ↓
+Open
+ ↓
+In Progress
+ ↓
+Fixed
+ ↓
+Retest
+ ↓
+Closed
+
+Possible alternate paths:
+Rejected
+Duplicate
+Cannot Reproduce
+Deferred
+Not a Bug
+Reopened
+
+_____________________________________________________________________________
+Common Statuses
+Status	        Meaning
+New	          QA reported the bug
+Assigned	    Assigned to developer
+Open	        Developer accepted it
+Fixed	        Code updated
+Retest	      QA verifies the fix
+Closed	      Fix confirmed
+Reopened	    Still failing
+Deferred	    Fix postponed
+Duplicate	    Already reported
+Rejected	    Not considered a valid defect
+__P__________________________
