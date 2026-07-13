@@ -1,0 +1,90 @@
+1.Using ChatGPT for Requirement Analysis
+Suppose the requirement is:
+Users can log in using email and password.
+Instead of immediately generating test cases, use ChatGPT to analyze it.
+Prompt
+You are a Senior QA Engineer.
+Analyze the following requirement.
+Requirement:
+Users can log in using email and password.
+Identify:
+1. Functional Requirements
+2. Non-functional Requirements
+3. Missing Requirements
+4. Assumptions
+5. Risks
+6. Test Scenarios
+_________________________________________________
+2.Acceptance Criteria
+Acceptance Criteria define when a feature is considered complete.
+Prompt:Generate acceptance criteria for the Login feature.
+_________________________________________
+3.Risk Analysis
+Prompt:
+Analyze this requirement.
+Identify:
+Business Risks
+Technical Risks
+Testing Risks
+Security Risks
+Performance Risks
+_______________________________________________
+4.Requirement Traceability Matrix (RTM)
+Prompt
+Create an RTM for the following requirements.
+Include:
+Requirement ID
+Requirement
+Test Scenario
+Test Case
+Priority
+___________________________________________________
+Reusable Master Prompt:
+You are a Senior QA Lead with 12 years of experience.
+
+Analyze the following requirement.
+
+Generate:
+
+1. Functional Requirements
+
+2. Non-functional Requirements
+
+3. Business Rules
+
+4. Missing Requirements
+
+5. Ambiguities
+
+6. Assumptions
+
+7. Risks
+
+8. Acceptance Criteria
+
+9. Functional Test Scenarios
+
+10. Negative Test Scenarios
+
+11. Boundary Test Scenarios
+
+12. Security Test Scenarios
+
+13. Accessibility Test Scenarios
+
+14. Regression Impact
+
+15. Requirement Traceability Matrix
+
+Return results in structured markdown tables.
+___________________________________________
+
+Day 4 Cheat Sheet
+QA Task                            	ChatGPT Prompt
+Requirement Analysis          	"Analyze the following requirement..."
+Missing Requirements          	"Identify missing requirements."
+Ambiguity Check	                "Find ambiguous statements."
+Acceptance Criteria            	"Generate acceptance criteria."
+Risk Analysis	                  "Identify business, technical, and testing risks."
+Test Scenarios                    "Generate functional, negative, and boundary scenarios."
+RTM	                          "Create a Requirement Traceability Matrix."
