@@ -106,3 +106,14 @@ Generate:
 15. Automation Candidates
 
 Return all results in structured markdown tables.
+____________________________________________________________
+Cheat Sheet
+Technique	                Best Used For	      Example
+Positive Testing	      Valid input	      Correct login
+Negative Testing	      Invalid input    	Wrong password
+Boundary Value Analysis	Range limits	      Age 18–60
+Equivalence Partitioning	Input groups	    Password length
+Decision Table	        Multiple conditions  	Login validation
+State Transition      	Changing states      	Account lock
+Error Guessing	        Experience-based testing	    Refresh during payment
+Pairwise Testing	      Multiple combinations      	Browser × OS × Language
