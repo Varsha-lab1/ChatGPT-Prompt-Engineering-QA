@@ -1,0 +1,114 @@
+API Testing with ChatGPT
+What is an API?
+API stands for Application Programming Interface.
+An API allows two software systems to communicate with each other.
+
+_________________________________________________
+
+HTTP Methods
+GET: Retrieve data.
+POST: Create new data.
+PUT :Update the entire resource.
+PATCH: Update part of a resource.
+DELETE :Delete data.
+__________________________________________
+HTTP Status Codes
+| Code | Meaning               |
+| ---- | --------------------- |
+| 200  | OK                    |
+| 201  | Created               |
+| 202  | Accepted              |
+| 204  | No Content            |
+| 400  | Bad Request           |
+| 401  | Unauthorized          |
+| 403  | Forbidden             |
+| 404  | Not Found             |
+| 409  | Conflict              |
+| 422  | Validation Error      |
+| 500  | Internal Server Error |
+| 503  | Service Unavailable   |
+________________________________________
+API Response
+Example:
+
+{
+ "userId":101,
+ "name":"Varsha",
+ "token":"abc123"
+}
+
+As a QA Engineer, verify:
+Status code
+Response time
+JSON structure
+Data values
+Required fields
+Data types
+_____________________________________________
+ChatGPT Prompt for API Test Cases
+
+You are a Senior API QA Engineer.
+Generate API test cases for:
+POST /login
+Include:
+1. Positive Tests
+2. Negative Tests
+3. Boundary Tests
+4. Security Tests
+5. Validation Tests
+6. Performance Checks
+Return in a markdown table.
+___________________________________________________
+ChatGPT Prompt for API Validation
+
+Analyze this API response.
+Verify:
+- Status Code
+- Required Fields
+- Missing Fields
+- Data Types
+- Validation Errors
+- Possible Bugs
+_________________________________________________
+ChatGPT Prompt for Postman
+
+Generate Postman test scripts for:
+POST /login
+Validate:
+- Status Code
+- Response Time
+- Token Exists
+- Response Schema
+_________________________________________________
+Common API Defects
+| Category           | Example                    |
+| ------------------ | -------------------------- |
+| Wrong status code  | Returns 200 instead of 401 |
+| Missing field      | Token not returned         |
+| Wrong datatype     | Age returned as string     |
+| Duplicate record   | User created twice         |
+| Invalid validation | Empty email accepted       |
+| Security           | Token exposed              |
+| Performance        | Response takes 8 seconds   |
+| Incorrect message  | Success message on failure |
+___________________________________________________
+Master Prompt
+
+You are a Senior API QA Engineer.
+Analyze the following REST API.
+Generate:
+1. Functional Test Cases
+2. Positive Test Cases
+3. Negative Test Cases
+4. Boundary Test Cases
+5. Validation Test Cases
+6. Authentication Tests
+7. Authorization Tests
+8. Security Tests
+9. Performance Checks
+10. Response Validation
+11. Error Handling Tests
+12. SQL Validation Ideas
+13. Regression Tests
+Return results in markdown tables.
+______________________________________________
