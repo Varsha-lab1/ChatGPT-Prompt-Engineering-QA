@@ -1,0 +1,16 @@
+1.Find duplicate email addresses.
+solution:
+Select email,count(*) from Users
+Group By email 
+HAving Count(*)>1;
+_______________________________________
+2.Write SQL queries to verify:
+User Registration
+User Login
+Password Reset
+Solution:
+Select id,name from Users where email="varsha@test.com" ;
+
+Select email,pass from Users where id=101;
+
+Select pass_resetx from Users where email="a@test.com";
