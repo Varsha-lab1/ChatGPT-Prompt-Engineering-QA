@@ -1,0 +1,91 @@
+Day 8: SQL & Database Testing with ChatGPT
+CRUD Operations
+CRUD is one of the most common interview topics.
+Operation	  SQL
+Create	  INSERT
+Read	  SELECT
+Update	UPDATE
+Delete	DELETE
+_________________________________________
+Database Validation for QA
+Example:
+Requirement:
+User registers.
+Validate:
+SELECT * FROM Users
+WHERE email='abc@test.com';
+Check:
+Email
+Name
+Created Date
+Status
+_____________________________________________
+API + Database Validation
+API:
+POST /users
+Returns:
+201 Created
+
+Backend validation:
+SELECT * FROM Users
+WHERE email='abc@test.com';
+
+Compare:
+API Response
+Database Record
+_____________________________________________________
+ChatGPT Prompt for SQL
+You are a Senior Database Tester.
+Generate SQL queries to verify:
+1. User Registration
+2. User Login
+3. Password Reset
+4. Product Purchase
+Include:
+SELECT
+UPDATE
+DELETE Validation
+JOIN Queries
+________________________________________________
+ChatGPT Prompt for Database Testing
+Act as a Senior QA Engineer.
+Generate Database Test Cases for:
+Online Banking Application.
+Include:
+CRUD Validation
+Data Integrity
+Duplicate Records
+Foreign Keys
+Null Values
+Constraints
+Transaction Validation
+__________________________________________
+
+Master Prompt
+You are a Senior Database QA Engineer.
+
+Analyze the following feature.
+
+Generate:
+
+1. Database Test Cases
+
+2. CRUD Validation
+
+3. SQL Queries
+
+4. JOIN Queries
+
+5. Aggregate Queries
+
+6. Duplicate Record Checks
+
+7. Data Integrity Validation
+
+8. Foreign Key Validation
+
+9. API + DB Validation
+
+10. Performance Queries
+
+Return everything as markdown tables.
