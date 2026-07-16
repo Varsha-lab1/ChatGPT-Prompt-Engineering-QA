@@ -1,0 +1,107 @@
+Exercise 1
+Generate API test cases for:
+POST /register
+Include:
+Positive
+Negative
+Boundary
+Security
+Solutions:
+You are a Senior API QA Engineer.
+Generate API test cases for:
+POST /register
+Include:
+1. Positive Tests
+2. Negative Tests
+3. Boundary Tests
+4. Security Tests
+Return in a markdown table.
+______________________________________________
+Write a prompt to generate Postman tests for:
+GET /products
+Solutions:
+You are a Senior API Test Automation Engineer with expertise in Postman.
+
+Generate comprehensive Postman test scripts for the following API:
+
+Method: GET
+Endpoint: /products
+
+Requirements:
+1. Use the Postman `pm` API.
+2. Validate the HTTP status code is 200.
+3. Verify the response time is less than 2000 ms.
+4. Validate the `Content-Type` header is `application/json`.
+5. Verify the response body is valid JSON.
+6. Ensure the response is an array of products.
+7. Verify the array is not empty.
+8. Validate each product contains the required fields:
+   - id
+   - name
+   - price
+   - category
+8. Verify data types:
+   - id → Number
+   - name → String
+   - price → Number
+   - category → String
+9. Ensure `price` is greater than or equal to 0.
+10. Ensure `name` is not null or empty.
+11. Ensure `id` values are unique.
+12. Check that no required field is null or undefined.
+13. Add meaningful assertion messages for each test.
+14. Organize the code using separate `pm.test()` blocks.
+15. Follow Postman scripting best practices and write clean, production-ready code.
+
+Return only the complete JavaScript code that can be pasted directly into the **Tests** tab in Postman. Do not include explanations.
+__________________________________________________________________
+Create API test scenarios for:
+DELETE /user/{id}
+Include:
+Valid ID
+Invalid ID
+Unauthorized request
+Non-existent user
+Solution:
+| TC ID  | Test Scenario                                     | Test Data                                            | Expected Result                                                                             |
+| ------ | ------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| TC_001 | Delete an existing user with a valid ID           | Valid user ID (e.g., 101)                            | Status **200 OK** or **204 No Content**. User is successfully deleted.                      |
+| TC_002 | Verify the deleted user no longer exists          | Previously deleted user ID                           | GET request returns **404 Not Found** or equivalent.                                        |
+| TC_003 | Delete the same user again                        | Same deleted user ID                                 | Status **404 Not Found**. Appropriate error message returned.                               |
+| TC_004 | Delete a user with an invalid ID format           | `abc`, `@123`, `12#`                                 | Status **400 Bad Request**. Validation error returned.                                      |
+| TC_005 | Delete a user with a negative ID                  | `-1`                                                 | Status **400 Bad Request**. Validation error returned.                                      |
+| TC_006 | Delete a user with ID as zero                     | `0`                                                  | Status **400 Bad Request** or **404 Not Found**, based on API design.                       |
+| TC_007 | Delete a user with a very large ID                | `999999999999`                                       | Status **404 Not Found** or validation error.                                               |
+| TC_008 | Delete without providing an authentication token  | No Authorization header                              | Status **401 Unauthorized**. Authentication error returned.                                 |
+| TC_009 | Delete with an expired authentication token       | Expired JWT/Token                                    | Status **401 Unauthorized**. Token expired message returned.                                |
+| TC_010 | Delete with an invalid authentication token       | Random/invalid token                                 | Status **401 Unauthorized**. Invalid token message returned.                                |
+| TC_011 | Delete using a user without delete permission     | Valid token with insufficient privileges             | Status **403 Forbidden**. Authorization error returned.                                     |
+| TC_012 | Delete a non-existent user                        | Non-existent user ID (e.g., 999999)                  | Status **404 Not Found**. User not found message returned.                                  |
+| TC_013 | Verify response headers after successful deletion | Valid user ID                                        | Correct `Content-Type`, security headers, and cache headers are present.                    |
+| TC_014 | Verify response time                              | Valid user ID                                        | Response time is within SLA (e.g., < 2 seconds).                                            |
+| TC_015 | Verify idempotency                                | Send DELETE request multiple times for the same ID   | First request succeeds; subsequent requests return **404 Not Found** without server errors. |
+| TC_016 | Verify SQL Injection attempt in path parameter    | `/user/' OR 1=1--`                                   | Request is rejected with **400 Bad Request**. No unintended records are deleted.            |
+| TC_017 | Verify XSS payload in path parameter              | `/user/<script>alert(1)</script>`                    | Input is rejected. No script execution.                                                     |
+| TC_018 | Verify concurrent delete requests                 | Two DELETE requests for the same user simultaneously | One request succeeds; the other returns **404 Not Found** or another appropriate response.  |
+| TC_019 | Verify deletion is reflected in related APIs      | Deleted user ID                                      | User is absent from GET/List APIs and dependent services behave correctly.                  |
+| TC_020 | Verify audit logging (if applicable)              | Valid delete request                                 | Deletion event is recorded with user, timestamp, and action details.                        |
+___________________________________________________________________
+
+Cheat Sheet
+| Topic  | Key Points                  |_____________________
+| ------ | --------------------------- |
+| API    | Interface between systems   |
+| REST   | Common web API architecture |
+| GET    | Retrieve data               |
+| POST   | Create data                 |
+| PUT    | Replace entire resource     |
+| PATCH  | Update part of a resource   |
+| DELETE | Remove data                 |
+| 200    | OK                          |
+| 201    | Created                     |
+| 400    | Bad Request                 |
+| 401    | Unauthorized                |
+| 403    | Forbidden                   |
+| 404    | Not Found                   |
+| 500    | Internal Server Error       |
+____________________________
