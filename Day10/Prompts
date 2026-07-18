@@ -1,0 +1,66 @@
+ChatGPT Prompts for Selenium
+Generate Selenium Code
+You are a Senior Automation QA Engineer.
+Generate Selenium Java code using TestNG for the Login page.
+Requirements:
+- Use Page Object Model
+- Explicit Wait
+- Assertions
+- Exception Handling
+_______________________________________________________
+Generate XPath
+Generate robust XPath locators for the following HTML.
+
+Prioritize stable, maintainable selectors and avoid indexes whenever possible.
+
+<HTML HERE>
+_______________________________________________
+Convert Manual Test Case to Automation
+Convert the following manual test case into Selenium Java automation using TestNG and the Page Object Model.
+
+<Manual Test Case>
+_________________________________________________
+Debug Selenium
+Analyze the following Selenium exception.
+
+Generate:
+
+1. Root Cause
+2. Possible Solutions
+3. Best Practices
+4. Improved Code
+
+<Stack Trace>
+________________________________________________
+AI Code Review Prompt
+You are a Senior Automation Architect.
+
+Review the following Selenium code.
+
+Identify:
+
+1. Code Smells
+2. Flaky Test Risks
+3. Performance Issues
+4. Design Improvements
+5. Best Practices
+6. Refactored Code
+_____________________________________________
+
+Cheat Sheet:
+
+| Topic               | Key Point                                           |
+| ------------------- | --------------------------------------------------- |
+| Selenium            | Browser automation tool                             |
+| WebDriver           | Controls browser actions                            |
+| Best Locator        | ID → Name → CSS → XPath                             |
+| Relative XPath      | Preferred over absolute XPath                       |
+| CSS Selector        | Usually shorter and faster                          |
+| Explicit Wait       | Best choice for synchronization                     |
+| POM                 | Separates page logic from tests                     |
+| TestNG              | Testing framework with annotations and assertions   |
+| Data-Driven Testing | Externalize test data                               |
+| Common Exceptions   | NoSuchElement, StaleElementReference, Timeout, etc. |
+
+
+<CODE>
