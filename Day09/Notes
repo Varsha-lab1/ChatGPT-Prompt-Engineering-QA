@@ -1,0 +1,116 @@
+JSON Schema Validation
+Suppose response:
+
+{
+   "id":101,
+   "name":"Varsha",
+   "email":"varsha@test.com"
+}
+
+Schema checks:
+id → Integer
+name → String
+email → String
+Required fields
+No unexpected fields
+Prompt:
+Analyze this JSON response.
+Generate:
+- JSON Schema
+- Validation Rules
+- Missing Fields
+- Data Type Validation
+___________________________________________________
+API Chaining 
+One API depends on another.
+Example:
+Step 1
+Register User
+POST /register
+↓
+Returns
+UserID
+↓
+Step 2
+Login
+POST /login
+↓
+Returns
+Access Token
+↓
+Step 3
+Create Order
+POST /orders
+↓
+Requires
+Token
+↓
+Step 4
+Get Order
+GET /orders/{id}
+This sequence is called API Chaining.
+_______________________________________________
+Postman Test Scripts
+
+Example JavaScript Tests
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response time less than 2 sec", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+pm.test("Token exists", function () {
+    var json = pm.response.json();
+    pm.expect(json.token).to.exist;
+});
+
+ChatGPT Prompt
+Generate Postman test scripts for:
+POST /login
+Validate:
+- Status Code
+- Token
+- Response Time
+- Schema
+- Content Type
+__________________________________________________________
+REST Assured Prompt
+You are a Senior Automation QA Engineer.
+Generate REST Assured Java code for:
+POST /login
+Validate:
+- Status Code
+- Response Body
+- Headers
+- Response Time
+________________________________________________________
+
+Master Prompt
+
+Save this prompt.
+
+You are a Senior API Test Architect.
+
+Analyze the following REST API.
+
+Generate:
+
+1. Functional Test Cases
+2. Positive Test Cases
+3. Negative Test Cases
+4. Boundary Test Cases
+5. Authentication Tests
+6. Authorization Tests
+7. JWT Validation
+8. JSON Schema Validation
+9. Security Test Cases
+10. API Chaining Scenarios
+11. Postman Test Scripts
+12. REST Assured Automation
+13. Performance Tests
+14. Regression Test Cases
+
+Return everything in markdown tables.
