@@ -1,0 +1,195 @@
+Selenium Automation Testing with ChatGPT
+What is Selenium?
+Selenium is an open-source automation testing tool used to automate web browsers.
+
+Selenium Suite
+Tool	                Purpose
+Selenium IDE	      Record & Playback
+Selenium WebDriver	Browser automation using code
+Selenium Grid	      Parallel execution
+Selenium Manager	  Automatically manages browser drivers (Selenium 4.6+)
+_________________________________________________________
+Selenium WebDriver Workflow
+Start Browser
+      ↓
+Navigate to URL
+      ↓
+Locate Element
+      ↓
+Perform Action
+      ↓
+Validate Result
+      ↓
+Close Browser
+________________________________________
+Selenium Locators
+Locators identify elements on a web page.
+
+Locator	        Example
+id	            id="username"
+name	          name="email"
+className	      class="btn"
+tagName          	input
+linkText	        Login
+partialLinkText    	Log
+cssSelector	      input#username
+xpath	            //input[@id='username']
+
+_____________________________________________
+
+Best Practice Order
+ID
+Name
+CSS Selector
+XPath
+__________________________
+XPath
+Relative XPath ✅
+//input[@id='username']
+
+Absolute XPath ❌
+/html/body/div[2]/div/form/input
+
+Common XPath Examples
+By Attribute:
+//input[@name='email']
+
+Contains:
+//button[contains(text(),'Login')]
+
+Starts With:
+//input[starts-with(@id,'user')]
+
+Text:
+//button[text()='Submit']
+
+Multiple Attributes:
+//input[@type='text' and @name='email']
+
+Parent:
+//label[text()='Email']/parent::div
+
+Following Sibling:
+//label[text()='Email']/following-sibling::input
+_____________________________________________
+WebDriver Commands
+Browser Commands
+driver.get(url);
+driver.navigate().to(url);
+driver.navigate().back();
+driver.navigate().forward();
+driver.navigate().refresh();
+driver.quit();
+driver.close();
+_______________________________________
+Element Commands
+sendKeys()
+click()
+clear()
+getText()
+getAttribute()
+isDisplayed()
+isEnabled()
+isSelected()
+___________________________________
+Waits (Very Important)
+Hard-coded waits often make tests unreliable.
+
+Implicit Wait
+Applies globally.
+ex.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+Explicit Wait ⭐
+Recommended for most synchronization scenarios.
+ex.
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+wait.until(ExpectedConditions.visibilityOf(element));
+
+Fluent Wait
+Allows custom polling intervals and ignored exceptions.
+Use when elements appear unpredictably.
+__________________________________________
+Handling Web Elements
+
+Examples:
+Text Box
+Radio Button
+Checkbox
+Dropdown
+Alert
+Popup
+Frame
+Window
+File Upload
+Calendar
+Web Table
+_____________________________________________
+Page Object Model (POM)
+Instead of writing locators inside test classes:
+Use POM:
+
+LoginPage.java
+
+@FindBy(id="email")
+@FindBy(id="password")
+@FindBy(id="login")
+
+Benefits
+Reusable code
+Easier maintenance
+Cleaner tests
+Better scalability
+____________________________________________________
+TestNG Basics
+
+Important annotations:
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
+
+Features:
+Assertions
+Priorities
+Groups
+Data Providers
+Parallel Execution
+______________________________________
+Data-Driven Testing
+Instead of hardcoding data:
+
+admin@test.com
+Password123
+
+Read from:
+Excel
+CSV
+JSON
+Database
+
+Benefits:
+Reusable tests
+Easier maintenance
+Better coverage
+_______________________________________
+Selenium Framework Components
+
+A professional framework typically includes:
+
+Project
+│
+├── Base
+├── Pages
+├── Tests
+├── Utilities
+├── TestData
+├── Config
+├── Reports
+├── Logs
+└── Drivers
